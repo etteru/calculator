@@ -8,7 +8,7 @@ public class CalculatorTest {
 
     @Test
     public void testAdd() throws Exception {
-        Assert.assertEquals(17, sut.add(8, 9));
+        Assert.assertEquals(2, sut.add(1, 1));
     }
 
     @Test
@@ -23,11 +23,7 @@ public class CalculatorTest {
 
     @Test
     public void testDivide() throws Exception {
-<<<<<<< HEAD
-        Assert.assertEquals(9, sut.divide(81, 9));
-=======
         Assert.assertEquals(8, sut.divide(56, 7));
->>>>>>> a6a785f4ce02f5fd461cb650d5fb4b330aaa50f7
     }
 
     @Test(expected = ArithmeticException.class)
