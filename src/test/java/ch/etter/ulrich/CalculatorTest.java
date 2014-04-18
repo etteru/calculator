@@ -23,7 +23,7 @@ public class CalculatorTest {
 
     @Test
     public void testDivide() throws Exception {
-        Assert.assertEquals(7, sut.divide(49, 7));
+        Assert.assertEquals(8, sut.divide(56, 7));
     }
 
     @Test(expected = ArithmeticException.class)
