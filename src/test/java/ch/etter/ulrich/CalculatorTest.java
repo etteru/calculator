@@ -18,7 +18,7 @@ public class CalculatorTest {
 
     @Test
     public void testMultiply() throws Exception {
-        Assert.assertEquals(48, sut.multiply(6, 8));
+        Assert.assertEquals(48, sut.multiply(6, 8)); // foo
     }
 
     @Test
