@@ -30,4 +30,14 @@ public class CalculatorTest {
     public void testDivideByZero() throws Exception {
         sut.divide(49, 0);
     }
+
+    @Test
+    public void testFac() throws Exception {
+        Assert.assertEquals(120, sut.fac(5));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testFacOfNegativeNumber() throws Exception {
+        sut.fac(-5);
+    }
 }
