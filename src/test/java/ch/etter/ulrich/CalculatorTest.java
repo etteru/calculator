@@ -3,6 +3,9 @@ package ch.etter.ulrich;
 import junit.framework.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class CalculatorTest {
     private Calculator sut = new Calculator();
 
@@ -39,5 +42,25 @@ public class CalculatorTest {
     @Test(expected = IllegalArgumentException.class)
     public void testFacOfNegativeNumber() throws Exception {
         sut.fac(-5);
+    }
+
+    @Test
+    public void testMax() throws Exception {
+        Assert.assertEquals(84, sut.max(Arrays.asList(34, 21, 84, 35)).intValue());
+    }
+
+    @Test
+    public void testMaxEmptyList() throws Exception {
+        Assert.assertNull(sut.max(new ArrayList<>()));
+    }
+
+    @Test
+    public void testMin() throws Exception {
+        Assert.assertEquals(21, sut.min(Arrays.asList(34, 21, 84, 35)).intValue());
+    }
+
+    @Test
+    public void testMinEmptyList() throws Exception {
+        Assert.assertNull(sut.min(new ArrayList<>()));
     }
 }

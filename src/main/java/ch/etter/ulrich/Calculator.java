@@ -1,5 +1,8 @@
 package ch.etter.ulrich;
 
+import java.util.List;
+import java.util.Optional;
+
 public class Calculator {
 
     public int add(int a, int b) {
@@ -28,5 +31,30 @@ public class Calculator {
         else {
             throw new IllegalArgumentException("Argument must be non-negative!");
         }
+    }
+
+    public Integer max(List<Integer> values) {
+        Optional<Integer> max = values.stream().max(Integer::compare);
+        if (max.isPresent()){
+            return max.get();
+        }
+        else {
+            return null;
+        }
+    }
+
+    public Integer min(List<Integer> values){
+        Integer result = null;
+        for (Integer v : values) {
+            if (result == null) {
+                result = v;
+            }
+            else{
+                if (v < result) {
+                    result = v;
+                }
+            }
+        }
+        return result;
     }
 }
